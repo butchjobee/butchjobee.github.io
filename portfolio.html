@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butch Jobee Catalan | Video Editor Portfolio</title>
+  <style>
+    /* Cool dark blue/black background */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80'), url('https://i.ibb.co/6bQ6Q8k/blue-dark-abstract.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Animated gradient background */
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      background: rgba(20,30,40,0.92); /* darker, matches container */
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      border-radius: 0 0 24px 24px;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.3s;
+      color: #fff;
+      border-bottom: 1.5px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+    }
+    header h1, header p {
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(35,166,213,0.10);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 3rem;
+      letter-spacing: 1px;
+      animation: popIn 1s;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: rgba(20,30,40,0.85); /* darker, more transparent */
+      border-radius: 24px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+      animation: fadeIn 1.2s;
+      backdrop-filter: blur(8px); /* glassmorphism effect */
+      color: #e0e6ed; /* softer white for text */
+      border: 1.5px solid rgba(255,255,255,0.08);
+    }
+    h1, h2 {
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(35,166,213,0.10);
+    }
+    .container p, .container li {
+      color: #e0e6ed;
+    }
+    .container a {
+      color: #23a6d5;
+      text-decoration: underline;
+    }
+    .container a:hover {
+      color: #e73c7e;
+    }
+    .services ul {
+      list-style: square;
+      padding-left: 1.2rem;
+    }
+    .services ul li {
+      transition: transform 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .services ul li:hover {
+      color: #e73c7e;
+      transform: scale(1.05) translateX(8px);
+    }
+    .video-section iframe {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 2rem;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(35,166,213,0.12);
+      transition: box-shadow 0.3s;
+    }
+    .video-section iframe:hover {
+      box-shadow: 0 6px 32px rgba(231,60,126,0.18);
+    }
+    .contact {
+      background: rgba(20,30,40,0.92); /* match container/header style */
+      padding: 2rem;
+      text-align: center;
+      border-radius: 24px 24px 0 0;
+      margin-top: 2rem;
+      box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+      animation: fadeIn 1.5s;
+      color: #e0e6ed;
+      border-top: 1.5px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+    }
+    .contact h2 {
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(35,166,213,0.10);
+    }
+    .contact a {
+      color: #23a6d5;
+      text-decoration: underline;
+    }
+    .contact a:hover {
+      color: #e73c7e;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bubble-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;"></canvas>
+  <header>
+    <h1>Butch Jobee Catalan</h1>
+    <p>Video Editor | Short-Form, Gaming, and Promotional Videos</p>
+  </header>
+
+  <div class="container">
+    <section class="bio">
+      <h2>About Me</h2>
+      <p>I'm Butch Jobee Catalan, a passionate video editor with a creative eye for detail and storytelling. With a background in editing a wide range of content—from fast-paced gaming montages (League of Legends, Wild Rift, Dota 2) to engaging promotional videos and fun, interview-based edits—I bring versatility and energy to every project I take on.</p>
+      <p>I specialize in short-form content like TikToks and vlogs, making sure each video is not just polished but also packed with personality. Using tools like Filmora and CapCut, I focus on clean cuts, catchy transitions, and audience-grabbing edits that fit the platform and the client’s vision. Whether you're building your brand, launching a product, or simply want your footage to stand out, I'm here to help bring your story to life.</p>
+      <p>I graduated with a Bachelor of Science in Computer Science, which helps me combine creativity with technical knowledge to deliver professional-level results every time.</p>
+    </section>
+
+    <section class="services">
+      <h2>Services I Offer</h2>
+      <ul>
+        <li>Gaming Montages (LoL, Dota 2, Wild Rift)</li>
+        <li>TikTok & Short-form Edits</li>
+        <li>Vlogs & Personal Content</li>
+        <li>Promotional & Course Videos</li>
+        <li>Fun & Creative Interview Cuts</li>
+      </ul>
+    </section>
+
+    <section class="video-section">
+      <h2>Portfolio</h2>
+      <iframe src="https://drive.google.com/file/d/1Eu6EibjfUMwEkhRZIqZ4ekV-tWVVztEo/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1iK5DnPWCCcYi3EMEyI7f7NlXevHKP7N6/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1OGnFMAlbl_aSXGDz6q-WEK5xtITQjwgP/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1VLxTRirhjXSQd4C8dQKbm_YI8drngyAT/preview" allow="autoplay"></iframe>
+    </section>
+  </div>
+
+  <div class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:zeffstein5631@gmail.com">zeffstein5631@gmail.com</a></p>
+  </div>
+  <script>
+    // Animated floating bubbles background
+    const canvas = document.getElementById('bubble-bg');
+    const ctx = canvas.getContext('2d');
+    let bubbles = [];
+    const colors = ['#23a6d5', '#e73c7e', '#ee7752', '#23d5ab', '#fff', '#2c5364'];
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function randomBubble() {
+      return {
+        x: Math.random() * canvas.width,
+        y: canvas.height + 50 + Math.random() * 100,
+        r: 10 + Math.random() * 30,
+        speed: 0.5 + Math.random() * 1.5,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 0.2 + Math.random() * 0.4
+      };
+    }
+    function createBubbles(num) {
+      bubbles = [];
+      for (let i = 0; i < num; i++) {
+        bubbles.push(randomBubble());
+      }
+    }
+    function drawBubbles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let b of bubbles) {
+        ctx.save();
+        ctx.globalAlpha = b.alpha;
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
+        ctx.fillStyle = b.color;
+        ctx.shadowColor = b.color;
+        ctx.shadowBlur = 16;
+        ctx.fill();
+        ctx.restore();
+        b.y -= b.speed;
+        if (b.y + b.r < 0) {
+          // Reset bubble to bottom
+          b.x = Math.random() * canvas.width;
+          b.y = canvas.height + 50 + Math.random() * 100;
+          b.r = 10 + Math.random() * 30;
+          b.speed = 0.5 + Math.random() * 1.5;
+          b.color = colors[Math.floor(Math.random() * colors.length)];
+          b.alpha = 0.2 + Math.random() * 0.4;
+        }
+      }
+    }
+    function animate() {
+      drawBubbles();
+      requestAnimationFrame(animate);
+    }
+    createBubbles(40);
+    animate();
+  </script>
+</body>
+</html>
